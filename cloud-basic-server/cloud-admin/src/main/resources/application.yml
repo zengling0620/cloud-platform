@@ -1,0 +1,42 @@
+spring:
+  boot:
+    admin:
+      context-path: admin
+  application:
+    name: admin-server
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: admin
+
+server:
+  port: 8769
+
+#eureka连接信息
+eureka:
+  instance:
+    hostname: summer.com
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    registryFetchIntervalSeconds: 5
+    proxy-user-name: admin
+    proxy-password: admin
+    service-url:
+      defaultZone: http://${eureka.client.proxy-user-name}:${eureka.client.proxy-password}@${eureka.instance.hostname}:8761/eureka/
+    healthcheck:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

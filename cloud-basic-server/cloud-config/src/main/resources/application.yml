@@ -1,0 +1,16 @@
+server:
+  port: 2021
+
+spring:
+  application:
+    name: config-server
+
+#eureka连接信息
+eureka:
+  instance:
+    hostname: summer.com
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka/
