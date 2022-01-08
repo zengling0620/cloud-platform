@@ -9,12 +9,18 @@ spring:
     user:
       name: admin
       password: admin
+  boot:
+    admin:
+      context-path: /admin #admin界面与eureka分离
 
 #eureka基本信息配置
 eureka:
   instance:
     #注册到eureka ip地址
     hostname: summer.com
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
   client:
     #因为自己是为注册中心，不需要自己注册自己
     register-with-eureka: false
@@ -29,3 +35,12 @@ eureka:
     enable-self-preservation: false
     # 清理间隔（单位毫秒，默认是60*1000）启用主动失效，并且每次主动失效检测间隔为3s
     eviction-interval-timer-in-ms: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

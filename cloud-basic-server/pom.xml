@@ -7,7 +7,6 @@
     <modules>
         <module>cloud-eureka</module>
         <module>cloud-config</module>
-        <module>cloud-admin</module>
         <module>cloud-gateway</module>
     </modules>
 

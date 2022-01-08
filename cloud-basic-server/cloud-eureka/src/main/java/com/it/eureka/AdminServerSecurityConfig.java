@@ -1,4 +1,4 @@
-package com.it.admin;
+package com.it.eureka;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Configuration;

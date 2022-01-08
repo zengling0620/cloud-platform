@@ -1,6 +1,7 @@
 package com.it.eureka;
 
 import com.it.core.Pretty;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @date: 2022-01-06 16:10
  */
 @Slf4j
+@EnableAdminServer
 @EnableEurekaServer
 @SpringBootApplication
 @EnableDiscoveryClient
