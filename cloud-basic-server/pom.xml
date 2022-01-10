@@ -8,6 +8,7 @@
         <module>cloud-eureka</module>
         <module>cloud-config</module>
         <module>cloud-gateway</module>
+        <module>cloud-admin</module>
     </modules>
 
     <parent>
@@ -25,5 +26,22 @@
             <artifactId>cloud-core</artifactId>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

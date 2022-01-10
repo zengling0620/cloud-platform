@@ -1,8 +1,17 @@
+server:
+  port: 8762
+
 spring:
   application:
-    name: gateway-server
-server:
-  port: 8080
+    name: admin-server
+  #eureka权限配置
+  security:
+    user:
+      name: admin
+      password: admin
+  boot:
+    admin:
+      context-path: admin #admin界面与eureka分离
 
 #eureka连接信息
 eureka:
@@ -22,3 +31,7 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+logging:
+  level:
+    com.netflix: warn

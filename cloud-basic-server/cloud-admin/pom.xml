@@ -5,18 +5,32 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.it</groupId>
         <artifactId>cloud-basic-server</artifactId>
+        <groupId>com.it</groupId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>cloud-eureka</artifactId>
+    <artifactId>cloud-admin</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--监控服务端-->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+        </dependency>
+        <!--邮件通知-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <!--整合安全机制-->
         <dependency>
@@ -24,5 +38,4 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
-
 </project>

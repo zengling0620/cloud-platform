@@ -1,4 +1,4 @@
-package com.it.eureka;
+package com.it.admin;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Configuration;
@@ -44,11 +44,10 @@ public class AdminServerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .ignoringRequestMatchers(
                         new AntPathRequestMatcher(adminServerContextPath + "/instances", HttpMethod.POST.toString()),
                         new AntPathRequestMatcher(adminServerContextPath + "/instances/*", HttpMethod.DELETE.toString()),
-                        new AntPathRequestMatcher(adminServerContextPath + "/actuator/**")
+                        new AntPathRequestMatcher(adminServerContextPath + "/actuator/**"),
+                        new AntPathRequestMatcher("/eureka/**")
                 )
                 .and()
                 .rememberMe().key(UUID.randomUUID().toString()).tokenValiditySeconds(1209600);
-
     }
-
 }

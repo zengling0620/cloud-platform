@@ -1,5 +1,5 @@
 server:
-  port: 2021
+  port: 8081
 
 spring:
   application:
@@ -8,9 +8,20 @@ spring:
 #eureka连接信息
 eureka:
   instance:
-    hostname: summer.com
+    hostname: localhost
   client:
+    enabled: true
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka/
+
+#开放端点用于SpringBoot Admin的监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
