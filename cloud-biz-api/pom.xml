@@ -4,11 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.it</groupId>
-  <artifactId>cloud-biz-api</artifactId>
-  <version>1.0</version>
+  <parent>
+    <groupId>com.it</groupId>
+    <artifactId>cloud-platform</artifactId>
+    <version>1.0</version>
+  </parent>
 
-  <name>cloud-biz-api</name>
+  <artifactId>cloud-biz-api</artifactId>
   <packaging>pom</packaging>
 
 </project>

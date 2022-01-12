@@ -7,7 +7,7 @@ server:
 #eureka连接信息
 eureka:
   instance:
-    hostname: localhost
+    hostname: summer.com
   client:
     register-with-eureka: true
     fetch-registry: true

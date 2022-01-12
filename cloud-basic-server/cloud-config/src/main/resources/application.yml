@@ -8,7 +8,7 @@ spring:
 #eureka连接信息
 eureka:
   instance:
-    hostname: localhost
+    hostname: summer.com
   client:
     enabled: true
     register-with-eureka: true

@@ -6,6 +6,7 @@
 
   <modules>
     <module>cloud-core</module>
+    <module>cloud-elasticsearch</module>
   </modules>
 
   <parent>
