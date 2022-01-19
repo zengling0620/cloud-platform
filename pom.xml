@@ -16,13 +16,16 @@
         <module>cloud-biz-api</module>
         <module>cloud-biz-server</module>
         <module>cloud-transaction</module>
-      </modules>
+        <module>cloud-schedule</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <spring-boot-dependencies.version>2.3.8.RELEASE</spring-boot-dependencies.version>
         <spring-cloud-dependencies.version>Hoxton.RELEASE</spring-cloud-dependencies.version>
         <docker-maven-plugin.version>1.2.2</docker-maven-plugin.version>
@@ -100,8 +103,12 @@
                 <artifactId>elasticsearch</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
-
-
+            <!--xxl-job-->
+            <dependency>
+                <groupId>com.it</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${default.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
