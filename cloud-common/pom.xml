@@ -7,6 +7,8 @@
   <modules>
     <module>cloud-core</module>
     <module>cloud-elasticsearch</module>
+      <module>cloud-redis</module>
+    <module>cloud-swagger</module>
   </modules>
 
   <parent>

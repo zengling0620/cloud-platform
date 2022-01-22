@@ -17,6 +17,7 @@
         <module>cloud-biz-server</module>
         <module>cloud-transaction</module>
         <module>cloud-schedule</module>
+        <module>cloud-uaa</module>
     </modules>
 
     <properties>
@@ -35,6 +36,7 @@
         <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
         <spring-data-elasticsearch.version>4.2.3</spring-data-elasticsearch.version>
         <elasticsearch.version>7.13.4</elasticsearch.version>
+        <knife4j.version>2.0.5</knife4j.version>
     </properties>
 
     <dependencyManagement>
@@ -108,6 +110,16 @@
                 <groupId>com.it</groupId>
                 <artifactId>xxl-job-core</artifactId>
                 <version>${default.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
