@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <modules>
-    <module>cloud-core</module>
-    <module>cloud-elasticsearch</module>
-      <module>cloud-redis</module>
-    <module>cloud-swagger</module>
-  </modules>
+    <modules>
+        <module>cloud-core</module>
+        <module>cloud-elasticsearch-starter</module>
+        <module>cloud-redis-starter</module>
+        <module>cloud-swagger-starter</module>
+        <module>cloud-log-starter</module>
+        <module>cloud-db-starter</module>
+    </modules>
 
-  <parent>
-    <groupId>com.it</groupId>
-    <artifactId>cloud-platform</artifactId>
-    <version>1.0</version>
-  </parent>
+    <parent>
+        <groupId>com.it</groupId>
+        <artifactId>cloud-platform</artifactId>
+        <version>1.0</version>
+    </parent>
 
-  <artifactId>cloud-common</artifactId>
-  <packaging>pom</packaging>
+    <artifactId>cloud-common</artifactId>
+    <packaging>pom</packaging>
 
 
 </project>

@@ -9,11 +9,11 @@ import lombok.ToString;
 @AllArgsConstructor
 public enum InquiryEnum {
 
-  /**
-   * 1 是  0 否
-   */
-  YES(1),
-  NO(0);
+    /**
+     * 1 是  0 否
+     */
+    NO(0),
+    YES(1);
 
-  private final int code;
+    private final Integer code;
 }
